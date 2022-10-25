@@ -138,7 +138,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20220922175324">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221025220332">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -146,7 +146,7 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20220922175324">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221025220332">
         
 
         
@@ -501,11 +501,11 @@ data-event-label="high"
   data-id="16-5-1"
   data-country="Ghana"
   data-charttitle="Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months"
-  data-charttitles="[]"
-  data-measurementunit=""
+  data-charttitles="[{&quot;series&quot;:&quot;Top three perceived corrupt institutions(16.5.1)&quot;,&quot;title&quot;:&quot;Perception of corruption among state institutions&quot;}]"
+  data-measurementunit="Percent"
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype="line"
+  data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
@@ -517,7 +517,7 @@ data-event-label="high"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;COMPOSITE_BREAKDOWN&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Government Officials&quot;,&quot;Judges ad Magistrates&quot;,&quot;Police&quot;]},&quot;title&quot;:&quot;Composite breakdown&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;},{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Year&quot;}]}"
-  data-compositebreakdownlabel=""
+  data-compositebreakdownlabel="Institution"
   data-precision="[]"
 >
   
@@ -562,11 +562,13 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
+    <p>Source: Transparency International</p>
+    
     
     <p>Geographical Area: </p>
     
     
-    <p>Unit of Measurement: </p>
+    <p>Unit of Measurement: Percent</p>
     
     
     <p>Footnote: </p>
@@ -654,7 +656,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months</h4>
+          <h4 id="chart-heading" class="chart-title">Perception of corruption among state institutions</h4>
           <div id="chart" class="plot-container">
             
               
@@ -871,39 +873,32 @@ opensdg.chartConfigAlter(function(config, info) {
 </script>
 
 <script>
-// For line charts, add the vertical line hover functionality.
 opensdg.chartConfigAlter(function(config, info) {
+  if (info.stackedDisaggregation) {
     var overrides = {
-        options: {
-            tooltips: {
-                intersect: false,
-                axis: 'x',
-            },
-        },
-        plugins: [{
-            beforeDatasetsDraw: function(chart) {
-                if (chart.tooltip._active && chart.tooltip._active.length) {
-                    var activePoint = chart.tooltip._active[0],
-                        ctx = chart.ctx,
-                        x = activePoint.tooltipPosition().x,
-                        topY = chart.scales['y-axis-0'].top,
-                        bottomY = chart.scales['y-axis-0'].bottom;
-
-                    // draw line
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.moveTo(x, topY);
-                    ctx.lineTo(x, bottomY);
-                    ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#757575';
-                    ctx.stroke();
-                    ctx.restore();
-                }
-            }
-        }],
+      options: {
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [{ stacked: true }],
+        }
+      }
     };
+    // If we have stackedDisaggregation, we need to group datasets into stacks.
+    config.data.datasets.forEach(function(dataset) {
+      var disaggregation = $.extend({}, dataset.disaggregation);
+      // We're going to "stringify" each combination of disaggregations in order
+      // to place them in their own "stacks". To place "stacked" disaggregations
+      // into the same stack, we set them as "samestack" before stringifying.
+      // Note that the string "samestack" is completely arbitrary.
+      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
+        disaggregation[info.stackedDisaggregation] = 'samestack';
+      }
+      // Use the disaggregation as a unique id for each stack.
+      dataset.stack = JSON.stringify(disaggregation);
+    });
     // Add these overrides onto the normal config, and return it.
     $.extend(true, config, overrides);
+  }
 });
 </script>
 
@@ -917,6 +912,9 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Source:</dt>
+        <dd>Transparency International</dd>
         
 
         
@@ -982,6 +980,9 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Source:</dt>
+        <dd>Transparency International</dd>
         
 
         
@@ -1091,43 +1092,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
       
         
           
@@ -1136,123 +1100,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Metadata last updated </th>
+        <th scope="row">Goal </th>
         <td>
           
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/sdg-ghana/data/commit/f5f52d2b1d7a4e176bea2e7011906dc20cef95c5" target="_blank">
-                2021-04-14: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">0. Indicator information </th>
-        <td>
-          
-            <p>Proportion of persons who paid at least a bribe (gave a public official money, gift or did a public official favour) to a public official, or were asked for a bribe by these public officials, in the last 12 months, expressed as percentage of persons who had at least one contact with a public official in the same period.</p>
+            <p>Goal 16: Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels</p>
 
           
         </td>
@@ -1265,23 +1116,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">0.a. Goal </th>
-        <td>
-          
-            <h1><a href="https://sustainabledevelopment-ghana.github.io/peace-and-justice-strong-institutions">Goal 16: Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels </a></h1>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      <tr>
-        <th scope="row">0.b. Target </th>
+        <th scope="row">Target </th>
         <td>
           
             <p>Target 16.5: Substantially reduce corruption and bribery in all their forms</p>
@@ -1297,10 +1132,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">0.c. Indicator </th>
+        <th scope="row">Indicator </th>
         <td>
           
-            <h2>Indicator 16.5.1: Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months</h2>
+            <p>Indicator 16.5.1: Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months</p>
 
           
         </td>
@@ -1316,16 +1151,13 @@ data-event-label="Change to Sources tab"
           
       
         
-          
-      
-        
       
       
       <tr>
-        <th scope="row">0.g. International organisations(s) responsible for global monitoring </th>
+        <th scope="row">Related indicators </th>
         <td>
           
-            <p>United Nations Office on Drugs and Crime (UNODC)</p>
+            <p>16.3</p>
 
           
         </td>
@@ -1341,7 +1173,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">1.a. Organisation </th>
+        <th scope="row">Organisation </th>
         <td>
           
             <p>Ghana Statistical Service</p>
@@ -1378,7 +1210,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">2.a. Definition and Concepts </th>
+        <th scope="row">Definition and concepts </th>
         <td>
           
             <p><strong>Definition:</strong></p>
@@ -1401,7 +1233,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">2.b. Unit of Measure </th>
+        <th scope="row">Unit of measure </th>
         <td>
           
             <p>Percentage (%)</p>
@@ -1423,7 +1255,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">3.a. Data sources </th>
+        <th scope="row">Data sources </th>
         <td>
           
             <p>Ghana Statistical Service, Ghana Living Standards Survey</p>
@@ -1442,7 +1274,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">3.c. Data collection calendar </th>
+        <th scope="row">Data collection calendar </th>
         <td>
           
             <p>5 years</p>
@@ -1453,6 +1285,88 @@ data-event-label="Change to Sources tab"
         
       
   
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Data providers </th>
+        <td>
+          
+            <p>Ghana Statistical Service (GSS)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Data compilers </th>
+        <td>
+          
+            <p>Ghana Statistical Service (GSS)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Rationale </th>
+        <td>
+          
+            <p>Corruption is an antonym of equal accessibility to public services and of correct functioning of the economy; as such, it has a negative impact on fair distribution of resources and development opportunities. Besides, corruption erodes public trust in authorities and the rule of law; when administrative bribery becomes a recurrent experience of large sectors of the population and businesses, its negative effects have an enduring negative impact on the rule of law, democratic processes and justice. By providing a direct measure of the experience of bribery, this indicator provides an objective metric of corruption, a yardstick to monitor progress in the fight against corruption</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Method of computation </th>
+        <td>
+          
+            <p>Proportion of persons who paid at least a bribe (gave a public official money, gift or did a public official favour) to a public official, or were asked for a bribe by these public officials, in the last 12 months, expressed as percentage of persons who had at least one contact with a public official in the same period.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+          
       
         
           
@@ -1479,50 +1393,98 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">4.c. Method of computation </th>
+        <th scope="row">Metadata last updated </th>
         <td>
           
-            <p>Population living ing households who paid anything or offer something to ensure a favourable response to a complaint filed with a public security service divided by total population living in households and multiplied by 100</p>
-
+            Oct 21, 2022
           
         </td>
         </tr>
         
       
   
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </table>
 
     </article>
@@ -1573,16 +1535,13 @@ data-event-label="Change to Sources tab"
   
       
         
-          
-      
-        
       
       
       <tr>
-        <th scope="row">Target number </th>
+        <th scope="row">Target name </th>
         <td>
           
-            <p>16.5</p>
+            <p>Substantially reduce corruption and bribery in all their forms</p>
 
           
         </td>
@@ -1595,32 +1554,66 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">UN designated tier </th>
+        <td>
           
+            <p>Tier II</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">UN custodian agency </th>
+        <td>
           
+            <p>United Nations Office on Drugs and Crime (UNODC)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Link to UN metadata </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-16-05-01.pdf" target="_blank">
+                United Nations Sustainable Development Goals Metadata (PDF 216 KB) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
   
   
   
@@ -1756,6 +1749,280 @@ data-event-label="Change to Sources tab"
 
 
 
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Transparency International</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            <p>Annual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            <p>Ghana</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.transparency.org/en/gcb" target="_blank">
+                Global Corruption Barometer <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      
+  
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            <p>TBA</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            <p>Non-official</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            <p>info@tighana.org</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
 
 </div>
 
@@ -1867,12 +2134,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20220922175324'></script>
+<script src='/site/assets/js/sdg.js?v=20221025220332'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20220922175324"></script><script>
+    <script src="/site/assets/js/custom.js?v=20221025220332"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

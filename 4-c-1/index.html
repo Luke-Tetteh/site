@@ -138,7 +138,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20220922175324">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221025220332">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -146,7 +146,7 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20220922175324">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221025220332">
         
 
         
@@ -516,7 +516,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;COMPOSITE_BREAKDOWN&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Private&quot;,&quot;Public&quot;]},&quot;title&quot;:&quot;Composite breakdown&quot;},{&quot;name&quot;:&quot;EDUCATION_LEV&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Early childhood education&quot;,&quot;Pre-primary education&quot;,&quot;Primary education&quot;,&quot;Lower secondary education&quot;,&quot;Upper secondary education&quot;]},&quot;title&quot;:&quot;Education level&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;},{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Year&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;COMPOSITE_BREAKDOWN&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Private&quot;,&quot;Public&quot;]},&quot;title&quot;:&quot;Composite breakdown&quot;},{&quot;name&quot;:&quot;EDUCATION_LEV&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;,&quot;Early childhood education&quot;,&quot;Pre-primary education&quot;,&quot;Primary education&quot;,&quot;Junior High School (JHS)&quot;,&quot;Senior High School (SHS)&quot;]},&quot;title&quot;:&quot;Education level&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;},{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Year&quot;}]}"
   data-compositebreakdownlabel="Sector"
   data-precision="[]"
 >
@@ -561,6 +561,8 @@ data-event-label="high"
   </div>
 
   <div id="datatableFooter">
+    
+    <p>Source: Ministry of Education</p>
     
     
     <p>Geographical Area: </p>
@@ -918,6 +920,9 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Source:</dt>
+        <dd>Ministry of Education</dd>
+        
 
         
 
@@ -982,6 +987,9 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Source:</dt>
+        <dd>Ministry of Education</dd>
         
 
         
@@ -1091,43 +1099,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
       
         
           
@@ -1136,123 +1107,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
-          
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/sdg-ghana/data/commit/e14f7088f4434120b5a95af7badd34439201e8ba" target="_blank">
-                2021-10-29: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-          
-      
-        
-      
-      
-      <tr>
-        <th scope="row">0.a. Goal </th>
+        <th scope="row">Goal </th>
         <td>
           
             <h1><a href="https://sustainabledevelopment-ghana.github.io/quality-education">Goal 4: Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all </a></h1>
@@ -1268,7 +1123,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">0.b. Target </th>
+        <th scope="row">Target </th>
         <td>
           
             <h5>Target 4.c: By 2030, substantially increase the supply of qualified teachers, including through international cooperation for teacher training in developing countries, especially least developed countries and small island developing States</h5>
@@ -1284,10 +1139,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">0.c. Indicator </th>
+        <th scope="row">Indicator </th>
         <td>
           
-            <h2>Indicator 4.c.1: Proportion of teachers in: (a) pre-primary; (b) primary; (c) lower secondary; and (d) upper secondary education who have received at least the minimum organized teacher training (e.g. pedagogical training) pre-service or in-service required for teaching at the relevant level in a given country</h2>
+            <h5>Indicator 4.c.1: Proportion of teachers in: (a) pre-primary; (b) primary; (c) lower secondary; and (d) upper secondary education who have received at least the minimum organized teacher training (e.g. pedagogical training) pre-service or in-service required for teaching at the relevant level in a given country</h5>
 
           
         </td>
@@ -1306,7 +1161,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">0.f. Related Indicators </th>
+        <th scope="row">Related indicators </th>
         <td>
           
             <p>1.2, 1.4, 1.a, 2.1, 2.2, 2.3, 3.7, 3.c, 3.d, 5.1, 5.5, 5.b, 8.6, 8.7, 10.2, 12.8, 13.3, 13.b</p>
@@ -1319,29 +1174,13 @@ data-event-label="Change to Sources tab"
   
       
         
-      
-      
-      <tr>
-        <th scope="row">0.g. International organisations(s) responsible for global monitoring </th>
-        <td>
-          
-            <p>UNESCO Institute for Statistics (UNESCO-UIS)</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
           
       
         
       
       
       <tr>
-        <th scope="row">1.a. Organisation </th>
+        <th scope="row">Organisation </th>
         <td>
           
             <p>Ghana Education Service</p>
@@ -1378,7 +1217,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">2.a. Definition and Concepts </th>
+        <th scope="row">Definition and concepts </th>
         <td>
           
             <p><strong>Definition:</strong></p>
@@ -1397,7 +1236,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">2.b. Unit of Measure </th>
+        <th scope="row">Unit of measure </th>
         <td>
           
             <p>Ratio and Percent</p>
@@ -1419,7 +1258,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">3.a. Data sources </th>
+        <th scope="row">Data sources </th>
         <td>
           
             <p>EMIS, 2020</p>
@@ -1444,7 +1283,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">3.e. Data providers </th>
+        <th scope="row">Data providers </th>
         <td>
           
             <p>Ghana Education Service</p>
@@ -1460,7 +1299,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">3.f. Data compilers </th>
+        <th scope="row">Data compilers </th>
         <td>
           
             <p>Ghana Statistical Service</p>
@@ -1482,7 +1321,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">4.a. Rationale </th>
+        <th scope="row">Rationale </th>
         <td>
           
             <p>Teachers play a key role in ensuring the quality of education provided. Ideally all teachers should receive adequate, appropriate and relevant pedagogical training to teach at the chosen level of education and be academically well-qualified in the subject(s) they are expected to teach. This indicator measures the share of the teaching work force which is pedagogically well-trained. </p>
@@ -1529,10 +1368,101 @@ data-event-label="Change to Sources tab"
           
       
         
-          
       
-        
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
           
+            Oct 10, 2022
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </table>
 
     </article>
@@ -1583,16 +1513,13 @@ data-event-label="Change to Sources tab"
   
       
         
-          
-      
-        
       
       
       <tr>
-        <th scope="row">Target number </th>
+        <th scope="row">Target name </th>
         <td>
           
-            <p>4.c</p>
+            <p>By 2030, substantially increase the supply of qualified teachers, including through international cooperation for teacher training in developing countries, especially least developed countries and small island developing States</p>
 
           
         </td>
@@ -1605,32 +1532,66 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">UN designated tier </th>
+        <td>
           
+            <p>Tier II</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">UN custodian agency </th>
+        <td>
           
+            <p>United Nations Education and Scientific Cultural Organisation - Institute for Statistics (UNESCO-UIS)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Link to UN metadata </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-04-0C-01.pdf" target="_blank">
+                United Nations Sustainable Development Goals Metadata (PDF 218 KB) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
   
   
   
@@ -1766,6 +1727,280 @@ data-event-label="Change to Sources tab"
 
 
 
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Ministry of Education</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            <p>Annual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            <p>Ghana</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://moe.gov.gh/emis/" target="_blank">
+                EMIS Data Centre, Ministry of Education <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      
+  
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            <p>TBA</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            <p>Official</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            <p>pro@moe.gov.gh</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
 
 </div>
 
@@ -1877,12 +2112,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20220922175324'></script>
+<script src='/site/assets/js/sdg.js?v=20221025220332'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20220922175324"></script><script>
+    <script src="/site/assets/js/custom.js?v=20221025220332"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

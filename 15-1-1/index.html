@@ -138,7 +138,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20220922175324">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20221025220332">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -146,7 +146,7 @@ var translations = {
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20220922175324">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/><link rel="stylesheet" href="/site/assets/css/custom.css?v=20221025220332">
         
 
         
@@ -502,7 +502,7 @@ data-event-label="high"
   data-country="Ghana"
   data-charttitle="Forest area as a proportion of total land area"
   data-charttitles="[]"
-  data-measurementunit=""
+  data-measurementunit="Percent"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
@@ -654,11 +654,13 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
+    <p>Source: World Bank</p>
+    
     
     <p>Geographical Area: </p>
     
     
-    <p>Unit of Measurement: </p>
+    <p>Unit of Measurement: Percent</p>
     
     
     <p>Footnote: </p>
@@ -1010,6 +1012,9 @@ opensdg.chartConfigAlter(function(config, info) {
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Source:</dt>
+        <dd>World Bank</dd>
+        
 
         
 
@@ -1074,6 +1079,9 @@ opensdg.chartConfigAlter(function(config, info) {
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Source:</dt>
+        <dd>World Bank</dd>
         
 
         
@@ -1183,43 +1191,6 @@ data-event-label="Change to Sources tab"
   
   
   
-  
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
-      
-        
-          
       
         
           
@@ -1228,126 +1199,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">Metadata last updated </th>
+        <th scope="row">Goal </th>
         <td>
           
-            
-            
-            
-            
-
-            
-              <a href="https://github.com/sdg-ghana/data/commit/6eaec674bdcfd8d0adfe0486b5d7a930b8d2bf43" target="_blank">
-                2021-06-16: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-        
-      
-      
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-        
-          
-      
-        
-      
-      
-      <tr>
-        <th scope="row">0.a. Goal </th>
-        <td>
-          
-            <h1><a href="https://sustainabledevelopment-ghana.github.io/life-on-land">Goal 15: Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss</a> life on land.</h1>
+            <p>Goal 15: Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss</p>
 
           
         </td>
@@ -1360,10 +1215,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">0.b. Target </th>
+        <th scope="row">Target </th>
         <td>
           
-            <p><strong>Target 15.1: </strong>By 2030, ensure the conservation, restoration and sustainable use of terrestrial and</p>
+            <p>Target 15.1<strong>: </strong>By 2030, ensure the conservation, restoration and sustainable use of terrestrial and</p>
 <p>inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and dry</p>
 <p>lands, in line with obligations under international agreements.</p>
 
@@ -1378,10 +1233,10 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">0.c. Indicator </th>
+        <th scope="row">Indicator </th>
         <td>
           
-            <h2>Indicator 15.1.1: Forest area as a proportion of total land area</h2>
+            <p>Indicator 15.1.1: Forest area as a proportion of total land area</p>
 
           
         </td>
@@ -1403,13 +1258,10 @@ data-event-label="Change to Sources tab"
           
       
         
-          
-      
-        
       
       
       <tr>
-        <th scope="row">1.a. Organisation </th>
+        <th scope="row">Organisation </th>
         <td>
           
             <p>Forestry Commission</p>
@@ -1425,7 +1277,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">1.b. Contact person(s) </th>
+        <th scope="row">Contact person(s) </th>
         <td>
           
             <p>District Forestry Officer</p>
@@ -1459,7 +1311,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">2.a. Definition and Concepts </th>
+        <th scope="row">Definition and concepts </th>
         <td>
           
             <p><strong>Definition:</strong></p>
@@ -1517,7 +1369,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">3.a. Data sources </th>
+        <th scope="row">Data sources </th>
         <td>
           
             <p>The data source is administrative data, specifically total land sizes and forest sizes collected from</p>
@@ -1535,7 +1387,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">3.b. Data collection method </th>
+        <th scope="row">Data collection method </th>
         <td>
           
             <p>For comparability across MMDAs, a standardized data collection template should be developed</p>
@@ -1571,7 +1423,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">4.a. Rationale </th>
+        <th scope="row">Rationale </th>
         <td>
           
             <p>Forests fulfil a number of functions that are vital for humanity, including the provision of goods</p>
@@ -1594,7 +1446,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">4.b. Comment and limitations </th>
+        <th scope="row">Comment and limitations </th>
         <td>
           
             <p>Assessment of forest area is carried out at infrequent intervals in many countries. Access to remote</p>
@@ -1617,7 +1469,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">4.c. Method of computation </th>
+        <th scope="row">Method of computation </th>
         <td>
           
             <p><strong>Method of computation:</strong></p>
@@ -1641,19 +1493,10 @@ data-event-label="Change to Sources tab"
           
       
         
-          
-      
-        
-          
-      
-        
-          
-      
-        
       
       
       <tr>
-        <th scope="row">4.j. Quality assurance </th>
+        <th scope="row">Quality assurance </th>
         <td>
           
             <p>Rigorous review processes are undertaken to ensure correct use of definitions and methodology as</p>
@@ -1673,7 +1516,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">5. Data availability and disaggregation </th>
+        <th scope="row">Data availability and disaggregation </th>
         <td>
           
             <p><strong>Data availability and gaps:</strong></p>
@@ -1692,7 +1535,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">6. Comparability / Deviation from international standards </th>
+        <th scope="row">Comparability/deviation from international standards </th>
         <td>
           
             <p>Internationally comparable</p>
@@ -1708,7 +1551,7 @@ data-event-label="Change to Sources tab"
       
       
       <tr>
-        <th scope="row">7. References and Documentation </th>
+        <th scope="row">References and Documentation </th>
         <td>
           
             <p><strong>URL:</strong></p>
@@ -1721,6 +1564,106 @@ data-event-label="Change to Sources tab"
         </tr>
         
       
+  
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            Oct 10, 2022
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 </table>
 
@@ -1772,16 +1715,13 @@ data-event-label="Change to Sources tab"
   
       
         
-          
-      
-        
       
       
       <tr>
-        <th scope="row">Target number </th>
+        <th scope="row">Target name </th>
         <td>
           
-            <p>15.1</p>
+            <p>By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements</p>
 
           
         </td>
@@ -1794,32 +1734,66 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row">UN designated tier </th>
+        <td>
           
+            <p>Tier I</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">UN custodian agency </th>
+        <td>
           
+            <p>Food and Agriculture Organization (FAO)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
+      
+      
+      <tr>
+        <th scope="row">Link to UN metadata </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-15-01-01.pdf" target="_blank">
+                United Nations Sustainable Development Goals Metadata (PDF 379 KB) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
   
   
   
@@ -1955,6 +1929,305 @@ data-event-label="Change to Sources tab"
 
 
 
+  <div class="row">
+  
+    
+    
+    <div class="col-md-6">
+      
+      <table class="table">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>World Bank</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            <p>Annual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            <p>2004</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            <p>Ghana</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://data.worldbank.org/indicator/SI.POV.DDAY?locations=GB" target="_blank">
+                Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            May 28, 2020
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            <p>TBA</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            <p>Non-official</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            <p>Research@WorldBank.org</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+  </div>
+
 
 </div>
 
@@ -2066,12 +2339,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20220922175324'></script>
+<script src='/site/assets/js/sdg.js?v=20221025220332'></script>
 <!-- Add any custom javascript here. -->
 
     
     
-    <script src="/site/assets/js/custom.js?v=20220922175324"></script><script>
+    <script src="/site/assets/js/custom.js?v=20221025220332"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

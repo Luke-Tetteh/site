@@ -288,7 +288,7 @@ search_index_extra_fields: []
 series_toggle: true
 sharethis_property: ''
 site_config_form:
-  enabled: true
+  enabled: false
   dropdowns: []
   repository_link: 'https://github.com/sdg-ghana/site/tree/develop/_data'
   translation_link: ''

@@ -54,7 +54,7 @@ custom_css:
   - /assets/css/custom.css
 custom_js:
   - /assets/js/custom.js
-data_edit_url: 'http://prose.io/#sdg-ghana/data/edit/develop/data/indicator_[id].csv'
+# data_edit_url: 'http://prose.io/#sdg-ghana/data/edit/develop/data/indicator_[id].csv'
 data_fields:
   units: UNIT_MEASURE
   series: SERIES
@@ -250,7 +250,7 @@ menu:
         translation_key: Covid indicators
       - path: gdp-indicators/
         translation_key: GDP indicators
-metadata_edit_url: metadata
+# metadata_edit_url: metadata
 metadata_tabs: []
 news:
   category_links: false

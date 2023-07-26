@@ -1,7 +1,7 @@
 ﻿accessible_charts: true
 accessible_tabs: true
 analytics:
-  ga_prod: ''
+  ga_prod: 'G-Q3NXY8BCX1'
 breadcrumbs:
   goal:
     - path: /
@@ -60,8 +60,8 @@ data_fields:
   series: SERIES
 date_formats: []
 disclaimer:
-  phase: ''
-  message: ''
+  phase: Beta
+  message: This is a development website. We welcome your <a href="mailto:%email_contacts.suggestions">feedback</a>.
 email_contacts:
   questions: sdg.secretariat@statsghana.gov.gh
   suggestions: sdg.secretariat@statsghana.gov.gh
@@ -75,6 +75,8 @@ footer_menu:
     translation_key: general.twitter
   - path: 'https://www.facebook.com/statsghana/'
     translation_key: general.facebook
+  - path: 'https://www.youtube.com/channel/UCUaIIM-7yRwXHBYt1IFJIqw/playlists'
+    translation_key: YouTube
   - path: /about/cookies-and-privacy/
     translation_key: menu.cookies
 frontpage_cards:
@@ -87,14 +89,10 @@ frontpage_cards:
   - title: Publications
     content: >
 
-      [UN Ghana Sustainable Development Partnership Framework with Ghana
-      2018-2022, June
-      2018](http://gh.one.un.org/content/dam/unct/ghana/docs/Delivering%20as%20One/UNCT-GH-UNSDP-2018.pdf)
+      [Ghana’s Voluntary National Review, 2022](https://ndpc.gov.gh/media/VNR_2022_Report_c5cXm4Q.pdf)
+      
 
-      <br/>
-
-      [National Strategy for the Development of Statistics, Ghana
-      2018-2022](http://www.statsghana.gov.gh/docfiles/publications/NSDS%20II%20Ghana_Revised_16.03.18.pdf)
+      [National Strategy for the Development of Statistics, Ghana 2018-2022](https://statsghana.gov.gh/gssmain/storage/img/NSDS%20II%20Ghana_Revised_16.03.18.pdf)
     include: ''
     button_label: More Publications
     button_link: 'https://sdg-ghana.github.io/site/publications/'
@@ -145,7 +143,7 @@ goals_page:
   description: Click on the *goals* below to see the most recent reported statistics.
 graph_color_headline: '#004466'
 graph_color_headline_high_contrast: '#55a6e5'
-graph_color_set: default
+graph_color_set: accessible
 graph_color_list: []
 graph_color_number: 0
 graph_title_from_series: true
@@ -221,6 +219,9 @@ map_options:
     color: '#172d44'
     dashArray: '5,5'
 menu:
+  - path: /
+    translation_key: Frontpage
+    dropdown: []
   - path: /goals
     translation_key: general.goals
     dropdown: []

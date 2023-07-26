@@ -10,6 +10,18 @@ If you have any feedback on our publications please contact us at sdg.secretaria
 
 ### All goals
 
+### [Ghana’s 2020 SDGs Budget Report](https://mofep.gov.gh/sites/default/files/reports/economic/2020_SDGs_Budget_Report.pdf)
+The 2020 SDGs Budget Report is a continuation of the efforts of the Government of Ghana to evaluate and define the funding gap for the SDGs in order to establish a financing mechanism that enables the country to fund and execute the Global Goals as expected.
+
+### [Ghana’s 2022 Voluntary National Review Report](https://ndpc.gov.gh/media/VNR_2022_Report_c5cXm4Q.pdf)
+In accordance with the UN Voluntary Common Reporting guidelines, Ghana has launched the 2022 Voluntary National Review report on the implementation of the SDGs. The report, the second since 2019, is under the leadership of the National Development Planning Commission.22 Aug 2022
+
+### [Ghana’s 2021 SDGs Budget Report](https://mofep.gov.gh/sites/default/files/reports/economic/2021-Ghana-SDG-Report.pdf)
+The 2021 SDGs Budget Report is a continuation of the efforts of the Government of Ghana to evaluate and define the funding gap for the SDGs in order to establish a financing mechanism that enables the country to fund and execute the Global Goals as expected.
+
+### [Ghana’s Budget Credibility and the Sustainable Development Goals](https://internationalbudget.org/wp-content/uploads/Ghana-Budget-Credibility-and-the-Sustainable-Development-Goals-1.pdf)
+Ghana’s efforts to achieve the Sustainable Development Goals (SDGs) by 2030 face major challenges, with rapid progress still needed in sectors related to the goals on hunger, gender equity and health. To accelerate progress toward development goals, Ghana needs to effectively mobilize domestic and international financing for programs that can address these challenges. National budgets are central to these efforts. This brief therefore looks at budget credibility patterns from 2018 to 2020 in seven key sectors that relate to 10 SDG goals, using available budget data from ministries as a proxy for SDG spending in the absence of more formal tracking systems for budget execution information on SDG spending. This analysis aims to show how Ghana’s current performance on budget credibility can potentially impact wider efforts to achieve the SDGs, and provides recommendations for how the government, development partners and civil society can expand awareness and action about budget credibility in SDG and development goal discussions.
+
 ### [Ghana SDGs Indicator Baseline Report 2018, 6 September 2018](http://www.gh.undp.org/content/dam/ghana/docs/Reports/UNDP_GH_IGC_SDGs_%20Indicator_%20Baseline_Report_2018.pdf).
 This is the first Sustainable Development Goals (SDGs) Indicator Baseline report for Ghana. The report provides a baseline status for a set of SDGs indicators and serves as a reference point for tracking progress on the achievement of the SDGs and the corresponding Africa Union’s Agenda 2063.
 
@@ -25,7 +37,8 @@ This publication suggests why each of the goals should matter to us and what we 
 **[“The New Global Goals Fly High in Ghana”, UNDP Biannual Newsletter, January 2016](http://www.gh.undp.org/content/dam/ghana/docs/Doc/Communication/UNDP_GH_COMM__Newsletter_January2016.pdf)**
 
 ### Strategic documentation that the SDGs also support
-[National Strategy for the Development of Statistics, Ghana 2018-2022](http://www.statsghana.gov.gh/docfiles/publications/NSDS%20II%20Ghana_Revised_16.03.18.pdf)  This is a comprehensive strategic document which seeks to guide the evolution of the National Statistical System (NSS) to enable it to produce the statistical knowledge the country needs in order to fulfil its development potential. This National Strategy for the Development of Statistics is primarily concerned with setting a vision for the next 5 years (2018‐ 2022) and providing milestones that the NSS must reach in order to make that vision a reality. This strategy seeks to create a system which is capable of being responsive to users’ needs by providing a basis for results‐oriented strategic management of the NSS and acting as a framework to mobilise and manage resources.
+[National Strategy for the Development of Statistics, Ghana 2018-2022](https://statsghana.gov.gh/gssmain/storage/img/NSDS%20II%20Ghana_Revised_16.03.18.pdf)  
+This is a comprehensive strategic document which seeks to guide the evolution of the National Statistical System (NSS) to enable it to produce the statistical knowledge the country needs in order to fulfil its development potential. This National Strategy for the Development of Statistics is primarily concerned with setting a vision for the next 5 years (2018‐ 2022) and providing milestones that the NSS must reach in order to make that vision a reality. This strategy seeks to create a system which is capable of being responsive to users’ needs by providing a basis for results‐oriented strategic management of the NSS and acting as a framework to mobilise and manage resources.
 
 ### [African Union Agenda 2063](https://au.int/Agenda2063/popular_version)  
 This is a strategic framework for the socio-economic transformation of the continent over the next 50 years. Its builds on, and seeks to accelerate the implementation of past and existing continental initiatives for growth and sustainable development.
@@ -43,5 +56,6 @@ This report presents the current situation in Ghana, regarding data production f
 
 ### Goal 4 Quality Education ###
  [An Assessment of Sustainable Development Goal Four (SDG 4), In Relation to the Standard of Basic Education in Ghana, July 2017](http://ugspace.ug.edu.gh/bitstream/handle/123456789/23007/An%20Assessment%20Of%20Sustainable%20Development%20Goal%20Four%20%28SDG%204%29%2C%20In%20Relation%20To%20The%20Standard%20Of%20Basic%20Education%20In%20Ghana.pdf?sequence=1&isAllowed=y)
+
 Inclusive and equitable quality education form an integral part of building a society. The quest of Sustainable Development Goal Four (4), ensuring inclusive and equitable quality education and promotion of lifelong learning opportunities for all is therefore very important. This academic thesis seeks to assess the SDG Four (4) in relation to the standard of basic education in Ghana. The core  objectives  of  this  work  were  to  find  out  the  extent  to  which  the  various  Educational Reforms  have  helped  solve  the  issue  of  quality  basic  education  in  Ghana.  Generally speaking, the research conceives that the attainment of SDG Four (4) is very important for Ghana’s development. The research revealed that over the past eight (8) years, the standard of quality basic education in the country has been decreasing. Ghana is making considerable progress towards attainment of the SDG 
 
